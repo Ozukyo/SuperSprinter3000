@@ -3,12 +3,13 @@ const fs = require("fs");
 const csv = require('csv-parser');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+const bodyParser = require("body-parser");
 
 const port = 8000;
 
 const app = express();
 app.set("view engine", "hbs");
-
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //Parse a data from csv

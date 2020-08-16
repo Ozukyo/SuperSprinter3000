@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add User Story | Super Sprinter 3000</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .container form{
-            display: flex;
-            align-content: flex-end;
-            flex-direction: column;
-        }
-    </style>
 </head>
 <body>
 <header><h1>Add User Story</h1></header>
-<div class="container">
+<div class="container" style="display: flex;">
     <form>
-        <label for="fstory">Story Title:</label>
-        <input type="text" id="fstory" name="fstory">
+        <label for="fstory">Story Title:</label><br>
+        <input type="text" id="fstory" name="fstory"><br><br>
 
-        <label for="ustory">User Story:</label>
-        <input type="text" id="ustory" name="ustory">
+        <label for="ustory">User Story:</label><br>
+        <textarea name="ustory"> </textarea><br><br>
 
-        <label for="criteria">Acceptance Criteria:</label>
-        <input type="text" id="criteria" name="criteria">
+        <label for="criteria">Acceptance Criteria:</label><br>
+        <textarea name="criteria"></textarea><br><br>
+
+        <label for="bvalue">Business value:</label><br>
+        <input type="text" id="bvalue" name="bvalue" maxlength="4" size="3"><br><br>
+
+        <label for="estm">Estimation:</label><br>
+        <input type="estm" id="estm" name="estm" maxlength="2" size="3"><br><br>
+
+        <input type="submit" id="button" value="Add new User Story">
     </form>
 </div>
 

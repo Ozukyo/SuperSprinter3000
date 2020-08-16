@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Ozukyo/SuperSprinter3000#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "csv-parser": "^2.3.3",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
