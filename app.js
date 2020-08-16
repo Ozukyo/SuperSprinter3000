@@ -9,26 +9,26 @@ const port = 8000;
 
 const app = express();
 app.set("view engine", "hbs");
-app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //Parse a data from csv
 function getCsvArrayData() {
-    let results = [];
+    var results = [];
 
     fs.createReadStream('data.csv')
         .pipe(csv())
         .on('data', (data) => results.push(data))
         .on('end', () => {
-        console.log(results);
+            // console.log(results);
         });
+    
     return results;
 }
 
 // Creating table and returning outer html
 function getHtmlFilledContent() {
     let results = getCsvArrayData();
-
     return JSDOM.fromFile("views/index.hbs").then(dom => {
         console.log(dom.window.document.querySelector("title").textContent);
         const table = dom.window.document.querySelector("table");
@@ -83,7 +83,6 @@ app.get("/", function(request, response){
 })
 
 app.get("/list", function(request, response){
-
     getHtmlFilledContent().then(result => {
         response.writeHeader(200, {"Content-Type": "text/html"});  
         response.write(result);  
@@ -95,6 +94,21 @@ app.get("/story", function(request, response) {
     response.render("story");
 })
 
+console.log("jestem przed postem");
+///////////// POST 
+app.post("/story", function(request, response) {
+    
+    var arr = getCsvArrayData();
+    setTimeout(x => {console.log("TERAZ:");console.log(arr);}, 1000);
+    // let lastId = arr[arr.length-1].id;
+
+    // let data = request.body;
+    // data.id = lastId;
+    // console.log(data);
+    // response.render("story");
+})
+
+
 // Launching server
 app.listen(port, (err) => {
     if(err) {
@@ -102,3 +116,4 @@ app.listen(port, (err) => {
     }
         console.log("server starting on port 8000...")
 })
+
