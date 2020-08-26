@@ -1,27 +1,17 @@
 {
   "name": "supersprinter3000",
   "version": "1.0.0",
-  "description": "First project using node.js",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ozukyo/SuperSprinter3000.git"
-  },
-  "author": "Ozukyo",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ozukyo/SuperSprinter3000/issues"
-  },
-  "homepage": "https://github.com/Ozukyo/SuperSprinter3000#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "csv-parser": "^2.3.3",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "hbs": "^4.1.1",
-    "jquery": "^3.5.1",
-    "jsdom": "^16.4.0"
+    "nodemon": "^2.0.4",
+    "pg": "^8.3.2"
   }
 }

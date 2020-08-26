@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User Story | Super Sprinter 3000</title>
+</head>
+<body>
+<header><h1>Update User Story</h1></header>
+<div class="container" style="display: flex;">
+    <form method="POST" action="/story/<%= id %>">
+        <label for="tstory">Story Title:</label><br>
+        <input type="text" id="tstory" name="title" value="<%= title %>"><br><br>
+
+        <label for="ustory">User Story:</label><br>
+        <textarea name="content"><%= content %></textarea><br><br>
+
+        <label for="criteria">Acceptance Criteria:</label><br>
+        <textarea name="criteria"><%= criteria %></textarea><br><br>
+
+        <label for="bvalue">Business value:</label><br>
+        <input type="text" id="bvalue" name="bvalue" maxlength="4" size="3" value="<%= bvalue %>"><br><br>
+
+        <label for="estm">Estimation:</label><br>
+        <input type="text" id="estm" name="estm" maxlength="2" size="3" value="<%= estm %>"><br><br>
+
+        <label for="status">Status:</label><br>
+        <select name="status">
+            <option value = "planning">planning</option>
+            <option value = "todo">todo</option>
+            <option value = "in_progress">in progress</option>
+            <option value = "review">review</option>
+            <option value = "done">done</option>
+        </select><br><br>
+
+        <input type="submit" id="button" value="Update User Story">
+    </form>
+</div>
+
+</body>
+</html>

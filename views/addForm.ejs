@@ -6,14 +6,14 @@
     <title>Add User Story | Super Sprinter 3000</title>
 </head>
 <body>
-<header><h1>Add User Story</h1></header>
+<h1>Add User Story</h1>
 <div class="container" style="display: flex;">
     <form method="POST" action="/story">
         <label for="tstory">Story Title:</label><br>
-        <input type="text" id="tstory" name="tstory"><br><br>
+        <input type="text" id="tstory" name="title"><br><br>
 
         <label for="ustory">User Story:</label><br>
-        <textarea name="ustory"> </textarea><br><br>
+        <textarea name="content"></textarea><br><br>
 
         <label for="criteria">Acceptance Criteria:</label><br>
         <textarea name="criteria"></textarea><br><br>
@@ -22,7 +22,7 @@
         <input type="text" id="bvalue" name="bvalue" maxlength="4" size="3"><br><br>
 
         <label for="estm">Estimation:</label><br>
-        <input type="estm" id="estm" name="estm" maxlength="2" size="3"><br><br>
+        <input type="text" id="estm" name="estm" maxlength="2" size="3"><br><br>
 
         <input type="submit" id="button" value="Add new User Story">
     </form>

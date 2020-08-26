@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Sprinter 3000</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <h1>Super Sprinter 3000</h1>
+    <p1><a href="/story">Add new User Story</a></p1>
+    <table id="my-table">
+        <tr>
+            <th>Id</th>
+            <th>Story Title</th>
+            <th>User Story</th>
+            <th>Acceptance Criteria</th>
+            <th>Buisness value</th>
+            <th>Estimation</th>
+            <th>Status</th>
+        </tr>
+        <% userStories.forEach(function(data){ %>
+                <tr>
+                    <td><%= data.id %></td>
+                    <td><a href="/story/<%= data.id %>"><%= data.story_title %></a></td>
+                    <td><%= data.user_story %></td>
+                    <td><%= data.acceptance_criteria %></td>
+                    <td><%= data.business_value %></td>
+                    <td><%= data.estimation %></td>
+                    <td><%= data.status %></td>
+                </tr>
+            <% }) %>
+    </table>
+</body>
+</html>
